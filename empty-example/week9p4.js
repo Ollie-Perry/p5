@@ -3,12 +3,14 @@ let other = [];
 let shapeNum = 10;
 
 function setup(){
-	createCanvas(windowWidth,windowHeight);
+	let canvas = createCanvas(1000,1000);
 	angleMode(DEGREES);
 	rectMode(CENTER);
 	for(let i = 0; i < shapeNum; i++) {
         shapeArr.push(new Bubble(random(0,width),random(0,height),random(1,40)));
     }
+	canvas.parent('sketch-holder');
+	//p5.Element.parent('sketch-holder');
 }
 
 function draw() {
